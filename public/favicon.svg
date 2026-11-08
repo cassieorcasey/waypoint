@@ -1,5 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <circle cx="32" cy="9" r="5" fill="#fff"/>
-  <circle cx="32" cy="32" r="12" fill="none" stroke="#fff" stroke-width="5.5"/>
-  <circle cx="32" cy="55" r="5" fill="#fff"/>
+  <style>
+    .ink { fill: #1d1d1f; }
+    .ring { fill: none; stroke: #1d1d1f; }
+    @media (prefers-color-scheme: dark) {
+      .ink { fill: #fff; }
+      .ring { stroke: #fff; }
+    }
+  </style>
+  <circle class="ink" cx="32" cy="9" r="5"/>
+  <circle class="ring" cx="32" cy="32" r="12" stroke-width="5.5"/>
+  <circle class="ink" cx="32" cy="55" r="5"/>
 </svg>
