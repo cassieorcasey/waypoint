@@ -30,9 +30,9 @@ Semua fase, topik, langkah, dan sumber ada di `src/data/roadmap.ts`.
 
 ## Materi per topik
 
-Topik yang punya catatan menampilkan tab **Materi** di panelnya, di samping **Langkah**. Catatan ditulis sebagai markdown di `src/content/<topik>.md`; saat ini Fase 1 (`python`, `git-github`, `sql`).
+Topik yang punya catatan menampilkan tab **Materi** di panelnya, di samping **Langkah**. Catatan ditulis sebagai markdown di `src/content/<topik>.md`; semua 27 topik di Fase 1–9 sudah punya catatan.
 
-Menambah catatan untuk topik lain:
+Menambah catatan untuk topik baru:
 
 1. Buat `src/content/<id-topik>.md` (id topik ada di `src/data/roadmap.ts`).
 2. Impor dan daftarkan di `src/content/index.ts`.

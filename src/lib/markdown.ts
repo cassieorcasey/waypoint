@@ -6,7 +6,7 @@
 // Tidak didukung (sengaja): HTML mentah, gambar, blok kode di dalam daftar, baris kosong di tengah daftar.
 
 export interface ListItem { text: string; sub?: ListNode }
-export interface ListNode { ordered: boolean; items: ListItem[] }
+export interface ListNode { ordered: boolean; start?: number; items: ListItem[] }
 
 export type Block =
   | { t: 'h'; level: 2 | 3; text: string }
@@ -27,6 +27,8 @@ const cells = (line: string) => line.trim().replace(/^\|/, '').replace(/\|$/, ''
 function parseList(lines: string[], start: number): [ListNode, number] {
   const first = LIST_RE.exec(lines[start])!;
   const root: ListNode = { ordered: /\d/.test(first[2]), items: [] };
+  // Daftar bernomor yang dilanjutkan setelah blok kode ("3. ...") tetap mulai dari nomornya sendiri.
+  if (root.ordered) { const n = parseInt(first[2], 10); if (n !== 1) root.start = n; }
   const stack: { indent: number; list: ListNode }[] = [{ indent: first[1].replace(/\t/g, '    ').length, list: root }];
   let i = start;
   while (i < lines.length) {

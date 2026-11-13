@@ -184,7 +184,8 @@ a { color: inherit; }
 .sheet-bottom .sheet-scroll { padding-top: 12px; }
 .sheet-close {
   position: absolute; top: 14px; right: 14px; width: 32px; height: 32px; border-radius: 50%;
-  display: grid; place-items: center; background: var(--pill-bg); color: var(--muted);
+  display: grid; place-items: center; background: var(--node-bg); color: var(--muted);
+  box-shadow: var(--shadow); z-index: 2;
 }
 .sheet-bottom .sheet-close { top: 16px; }
 .sheet-close:hover { color: var(--text); }

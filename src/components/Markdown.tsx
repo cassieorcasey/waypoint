@@ -18,7 +18,7 @@ const inline = (s: string) => renderInline(parseInline(s));
 function List({ list }: { list: ListNode }) {
   const Tag = list.ordered ? 'ol' : 'ul';
   return (
-    <Tag>
+    <Tag start={list.ordered ? list.start : undefined}>
       {list.items.map((it, i) => (
         <li key={i}>
           {inline(it.text)}
