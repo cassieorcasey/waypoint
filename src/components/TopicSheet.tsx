@@ -1,8 +1,11 @@
-import { useEffect, useState, type CSSProperties } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { Drawer } from 'vaul';
 import { motion } from 'motion/react';
 import type { Phase, Topic } from '../data/roadmap';
 import { topicCount } from '../lib/stats';
+import { NOTES } from '../content';
+import { readingMinutes } from '../lib/markdown';
+import { Markdown } from './Markdown';
 import { Ring } from './Ring';
 import { ArrowUpRight, Check, Close, Globe, Play } from './icons';
 
@@ -46,10 +49,22 @@ export function TopicSheet({ data, done, isDesktop, onClose, onStep }: Props) {
   );
 }
 
+type Tab = 'langkah' | 'materi';
+
 function SheetBody({ topic, phase, phaseIndex, done, onStep }: { topic: Topic; phase: Phase; phaseIndex: number; done: Set<string>; onStep: Props['onStep'] }) {
   const c = topicCount(topic, done);
+  const note = NOTES[topic.id];
+  const [tab, setTab] = useState<Tab>('langkah');
+  const scroller = useRef<HTMLDivElement>(null);
+  const show = note ? tab : 'langkah';
+
+  function pick(next: Tab) {
+    setTab(next);
+    scroller.current?.scrollTo({ top: 0 });
+  }
+
   return (
-    <div className="sheet-scroll">
+    <div className="sheet-scroll" ref={scroller}>
       <header className="sheet-head">
         <p className="sheet-eyebrow"><strong>Fase {phaseIndex + 1}</strong> · {phase.title}</p>
         <Drawer.Title className="sheet-title">{topic.title}</Drawer.Title>
@@ -59,6 +74,25 @@ function SheetBody({ topic, phase, phaseIndex, done, onStep }: { topic: Topic; p
         </div>
       </header>
 
+      {note && (
+        <div className="tabs" role="tablist" aria-label="Isi topik">
+          <button type="button" role="tab" id="tab-langkah" aria-selected={show === 'langkah'} aria-controls="panel-langkah"
+            className={`tab${show === 'langkah' ? ' on' : ''}`} onClick={() => pick('langkah')}>
+            Langkah
+          </button>
+          <button type="button" role="tab" id="tab-materi" aria-selected={show === 'materi'} aria-controls="panel-materi"
+            className={`tab${show === 'materi' ? ' on' : ''}`} onClick={() => pick('materi')}>
+            Materi <span className="tab-meta">· {readingMinutes(note)} mnt</span>
+          </button>
+        </div>
+      )}
+
+      {show === 'materi' && note ? (
+        <div role="tabpanel" id="panel-materi" aria-labelledby="tab-materi" className="sheet-section">
+          <Markdown source={note} />
+        </div>
+      ) : (
+        <div role={note ? 'tabpanel' : undefined} id="panel-langkah" aria-labelledby={note ? 'tab-langkah' : undefined}>
       <section className="sheet-section">
         <h3>Langkah</h3>
         <ul className="steps">
@@ -101,6 +135,8 @@ function SheetBody({ topic, phase, phaseIndex, done, onStep }: { topic: Topic; p
             ))}
           </ul>
         </section>
+      )}
+        </div>
       )}
     </div>
   );
