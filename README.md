@@ -28,6 +28,17 @@ Semua fase, topik, langkah, dan sumber ada di `src/data/roadmap.ts`.
 - **Jangan mengganti id yang sudah ada.** Progres di Supabase tersimpan per id langkah.
 - Langkah baru memakai id baru (misalnya `python-10`), meski disisipkan di tengah daftar.
 
+## Materi per topik
+
+Topik yang punya catatan menampilkan tab **Materi** di panelnya, di samping **Langkah**. Catatan ditulis sebagai markdown di `src/content/<topik>.md`; saat ini Fase 1 (`python`, `git-github`, `sql`).
+
+Menambah catatan untuk topik lain:
+
+1. Buat `src/content/<id-topik>.md` (id topik ada di `src/data/roadmap.ts`).
+2. Impor dan daftarkan di `src/content/index.ts`.
+
+Yang didukung: judul `##` dan `###`, paragraf, daftar, blok kode berpagar (` ```python `), tabel, kutipan `>`, serta `kode`, **tebal**, *miring*, dan tautan `https://`. HTML mentah, gambar, dan blok kode di dalam daftar tidak didukung.
+
 ## Progres dari roadmap lama
 
 Kalau roadmap HTML lama pernah dibuka di `cassieorcasey.github.io`, centangnya terdeteksi otomatis dan Waypoint menawarkan untuk memindahkannya. Dari tempat lain, buka `https://cassieorcasey.github.io/waypoint/#impor=1.2.7` dengan nomor checkbox lama (c1, c2, c7, ...).
@@ -38,7 +49,9 @@ Kalau roadmap HTML lama pernah dibuka di `cassieorcasey.github.io`, centangnya t
 |---|---|
 | `src/data/roadmap.ts` | Struktur roadmap: 9 fase, 27 topik, 124 langkah |
 | `src/components/PhaseMap.tsx` | Jalur fase, cincin progres, gelembung topik |
-| `src/components/TopicSheet.tsx` | Panel langkah dan sumber (Vaul) |
+| `src/components/TopicSheet.tsx` | Panel langkah, materi, dan sumber (Vaul) |
+| `src/content/` | Catatan materi per topik (markdown) dan daftarnya |
+| `src/lib/markdown.ts` | Pembaca markdown kecil tanpa dependensi |
 | `src/lib/progress.ts` | Baca dan simpan progres (Supabase atau localStorage) |
 | `schema.sql` | Tabel `waypoint_progress` dan RLS |
 
