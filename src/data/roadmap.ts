@@ -159,6 +159,10 @@ export const PHASES: Phase[] = [
           {
             "id": "sql-08",
             "text": "Normalisasi"
+          },
+          {
+            "id": "sql-09",
+            "text": "Mini-proyek Fase 1: alat CLI Python kecil dengan tes, di repo Git dengan README, ditambah dua query SQL yang menjawab pertanyaan bisnis"
           }
         ],
         "sources": [
@@ -323,6 +327,10 @@ export const PHASES: Phase[] = [
           {
             "id": "probabilitas-statistik-07",
             "text": "A/B testing"
+          },
+          {
+            "id": "probabilitas-statistik-08",
+            "text": "Mini-proyek Fase 2: regresi linear dengan gradient descent dari nol (NumPy), bandingkan dengan solusi tertutup, lalu jelaskan hasilnya ke orang non teknis"
           }
         ],
         "sources": [
@@ -481,6 +489,10 @@ export const PHASES: Phase[] = [
           {
             "id": "visualisasi-storytelling-03",
             "text": "Menyajikan insight ke audiens teknis dan non teknis"
+          },
+          {
+            "id": "visualisasi-storytelling-04",
+            "text": "Mini-proyek Fase 3: EDA lengkap pada satu dataset publik, ditutup laporan satu halaman untuk pembaca non teknis"
           }
         ],
         "sources": [
@@ -629,6 +641,10 @@ export const PHASES: Phase[] = [
           {
             "id": "evaluasi-model-06",
             "text": "Hyperparameter tuning"
+          },
+          {
+            "id": "evaluasi-model-07",
+            "text": "Mini-proyek Fase 4: model prediksi end-to-end dengan baseline, validasi yang benar, analisis error, dan satu paragraf dampak bisnis"
           }
         ],
         "sources": [
@@ -646,6 +662,101 @@ export const PHASES: Phase[] = [
             "kind": "youtube",
             "title": "StatQuest: Cross Validation, Bias and Variance, ROC dan AUC",
             "url": "https://www.youtube.com/@statquest"
+          }
+        ]
+      },
+      {
+        "id": "time-series",
+        "title": "Time Series & Forecasting",
+        "steps": [
+          {
+            "id": "time-series-01",
+            "text": "Komponen deret waktu: tren, musiman, residu, dan stasioneritas"
+          },
+          {
+            "id": "time-series-02",
+            "text": "Baseline wajib: naive, seasonal naive, dan moving average"
+          },
+          {
+            "id": "time-series-03",
+            "text": "Model klasik: exponential smoothing (ETS) dan ARIMA/SARIMA"
+          },
+          {
+            "id": "time-series-04",
+            "text": "Forecasting dengan ML: fitur lag, rolling, dan kalender pada model berbasis pohon"
+          },
+          {
+            "id": "time-series-05",
+            "text": "Validasi yang benar: walk-forward, TimeSeriesSplit, metrik MASE/sMAPE, dan menghindari kebocoran masa depan"
+          }
+        ],
+        "sources": [
+          {
+            "kind": "web",
+            "title": "Forecasting: Principles and Practice (Hyndman)",
+            "url": "https://otexts.com/fpp3/"
+          },
+          {
+            "kind": "web",
+            "title": "scikit-learn: TimeSeriesSplit",
+            "url": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html"
+          },
+          {
+            "kind": "web",
+            "title": "Kaggle Learn: Time Series",
+            "url": "https://www.kaggle.com/learn/time-series"
+          }
+        ]
+      },
+      {
+        "id": "eksperimen-kausal",
+        "title": "Eksperimen & Inferensi Kausal",
+        "steps": [
+          {
+            "id": "eksperimen-kausal-01",
+            "text": "Korelasi vs kausalitas: confounder dan pola pikir counterfactual"
+          },
+          {
+            "id": "eksperimen-kausal-02",
+            "text": "Merancang A/B test: hipotesis, metrik utama, guardrail, dan unit randomisasi"
+          },
+          {
+            "id": "eksperimen-kausal-03",
+            "text": "Power analysis: ukuran sampel dan minimum detectable effect"
+          },
+          {
+            "id": "eksperimen-kausal-04",
+            "text": "Menganalisis hasil: uji hipotesis, interval kepercayaan, multiple testing, dan bahaya peeking"
+          },
+          {
+            "id": "eksperimen-kausal-05",
+            "text": "Jebakan eksperimen: sample ratio mismatch, novelty effect, dan interferensi antar pengguna"
+          },
+          {
+            "id": "eksperimen-kausal-06",
+            "text": "Inferensi kausal dari data observasional: difference-in-differences dan propensity score (pengenalan)"
+          }
+        ],
+        "sources": [
+          {
+            "kind": "web",
+            "title": "Trustworthy Online Controlled Experiments (buku)",
+            "url": "https://experimentguide.com/"
+          },
+          {
+            "kind": "web",
+            "title": "Causal Inference for the Brave and True",
+            "url": "https://matheusfacure.github.io/python-causality-handbook/landing-page.html"
+          },
+          {
+            "kind": "web",
+            "title": "Evan Miller: kalkulator dan tulisan A/B testing",
+            "url": "https://www.evanmiller.org/ab-testing/"
+          },
+          {
+            "kind": "web",
+            "title": "Causal Inference: The Mixtape",
+            "url": "https://mixtape.scunning.com/"
           }
         ]
       }
@@ -805,6 +916,10 @@ export const PHASES: Phase[] = [
           {
             "id": "framework-03",
             "text": "Membangun, melatih, dan mengevaluasi model"
+          },
+          {
+            "id": "framework-04",
+            "text": "Mini-proyek Fase 5: fine-tune model pra-latih untuk satu kasus gambar atau teks, dengan laporan error dan perbandingan terhadap baseline klasik"
           }
         ],
         "sources": [
@@ -899,6 +1014,10 @@ export const PHASES: Phase[] = [
           {
             "id": "deployment-cloud-01",
             "text": "Deploy API ke Render, Hugging Face Spaces, atau AWS EC2/App Runner"
+          },
+          {
+            "id": "deployment-cloud-02",
+            "text": "Mini-proyek Fase 6: sajikan modelmu lewat API di Docker, deploy ke cloud, dan tulis README cara memakainya"
           }
         ],
         "sources": [
@@ -916,6 +1035,58 @@ export const PHASES: Phase[] = [
             "kind": "web",
             "title": "AWS App Runner: panduan resmi",
             "url": "https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html"
+          }
+        ]
+      },
+      {
+        "id": "data-engineering",
+        "title": "Dasar Data Engineering",
+        "steps": [
+          {
+            "id": "data-engineering-01",
+            "text": "ETL vs ELT, serta batch vs streaming"
+          },
+          {
+            "id": "data-engineering-02",
+            "text": "Data warehouse dan data lake, termasuk pemodelan star schema"
+          },
+          {
+            "id": "data-engineering-03",
+            "text": "Orkestrasi pipeline dengan Airflow: DAG, retry, dan idempotensi"
+          },
+          {
+            "id": "data-engineering-04",
+            "text": "Transformasi dan tes data dengan dbt"
+          },
+          {
+            "id": "data-engineering-05",
+            "text": "Kualitas data dan data contract antara produsen dan konsumen data"
+          },
+          {
+            "id": "data-engineering-06",
+            "text": "Kapan butuh komputasi terdistribusi (Spark): partisi dan shuffle"
+          }
+        ],
+        "sources": [
+          {
+            "kind": "web",
+            "title": "Apache Airflow: dokumentasi",
+            "url": "https://airflow.apache.org/docs/apache-airflow/stable/index.html"
+          },
+          {
+            "kind": "web",
+            "title": "dbt: pengantar",
+            "url": "https://docs.getdbt.com/docs/introduction"
+          },
+          {
+            "kind": "web",
+            "title": "Data Engineering Zoomcamp (DataTalksClub)",
+            "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp"
+          },
+          {
+            "kind": "web",
+            "title": "Apache Spark: dokumentasi",
+            "url": "https://spark.apache.org/docs/latest/"
           }
         ]
       }
@@ -1008,6 +1179,53 @@ export const PHASES: Phase[] = [
             "kind": "web",
             "title": "DataTalks.Club LLM Zoomcamp (kursus gratis, RAG dan evaluasi)",
             "url": "https://github.com/DataTalksClub/llm-zoomcamp"
+          }
+        ]
+      },
+      {
+        "id": "evaluasi-llm",
+        "title": "Evaluasi LLM, Biaya & Trade-off",
+        "steps": [
+          {
+            "id": "evaluasi-llm-01",
+            "text": "Mengapa mengevaluasi LLM berbeda: keluaran terbuka dan tidak deterministik"
+          },
+          {
+            "id": "evaluasi-llm-02",
+            "text": "Membangun set evaluasi dari kasus nyata dan melakukan error analysis"
+          },
+          {
+            "id": "evaluasi-llm-03",
+            "text": "Metode penilaian: pencocokan, rubrik, LLM-as-judge, dan batasannya; evaluasi retrieval terpisah dari generasi"
+          },
+          {
+            "id": "evaluasi-llm-04",
+            "text": "Biaya dan latensi: token, caching, routing model, dan batching"
+          },
+          {
+            "id": "evaluasi-llm-05",
+            "text": "Memilih pendekatan: prompt, RAG, atau fine-tuning; kapan model kecil cukup; evaluasi keamanan dan guardrail"
+          },
+          {
+            "id": "evaluasi-llm-06",
+            "text": "Mini-proyek Fase 7: aplikasi RAG kecil dengan 30 pertanyaan evaluasi dan laporan biaya per permintaan"
+          }
+        ],
+        "sources": [
+          {
+            "kind": "web",
+            "title": "Hamel Husain: Your AI Product Needs Evals",
+            "url": "https://hamel.dev/blog/posts/evals/"
+          },
+          {
+            "kind": "web",
+            "title": "Hugging Face: LLM Evaluation Guidebook",
+            "url": "https://github.com/huggingface/evaluation-guidebook"
+          },
+          {
+            "kind": "web",
+            "title": "Anthropic: prompt engineering overview",
+            "url": "https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview"
           }
         ]
       }
@@ -1125,6 +1343,58 @@ export const PHASES: Phase[] = [
             "url": "https://developers.google.com/machine-learning/guides/rules-of-ml"
           }
         ]
+      },
+      {
+        "id": "desain-sistem-ml",
+        "title": "Desain Sistem ML",
+        "steps": [
+          {
+            "id": "desain-sistem-ml-01",
+            "text": "Menetapkan kebutuhan: latensi, throughput, biaya, SLA, dan batch vs online"
+          },
+          {
+            "id": "desain-sistem-ml-02",
+            "text": "Arsitektur end-to-end: data, fitur, training, serving, dan monitoring"
+          },
+          {
+            "id": "desain-sistem-ml-03",
+            "text": "Pola serving dan rilis: batch, online, streaming, shadow, canary, dan fallback"
+          },
+          {
+            "id": "desain-sistem-ml-04",
+            "text": "Mode kegagalan: training-serving skew, drift, dependensi, dan rollback"
+          },
+          {
+            "id": "desain-sistem-ml-05",
+            "text": "Menulis design doc dan memimpin design review"
+          },
+          {
+            "id": "desain-sistem-ml-06",
+            "text": "Mini-proyek Fase 8: tambah tracking, CI, dan monitoring ke proyek Fase 6, tulis design doc dua halaman, lalu minta seseorang me-review"
+          }
+        ],
+        "sources": [
+          {
+            "kind": "web",
+            "title": "Google: Rules of Machine Learning",
+            "url": "https://developers.google.com/machine-learning/guides/rules-of-ml"
+          },
+          {
+            "kind": "web",
+            "title": "Google Cloud: MLOps, continuous delivery and automation pipelines",
+            "url": "https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning"
+          },
+          {
+            "kind": "web",
+            "title": "Designing Machine Learning Systems (Chip Huyen)",
+            "url": "https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/"
+          },
+          {
+            "kind": "web",
+            "title": "Hidden Technical Debt in Machine Learning Systems (paper)",
+            "url": "https://papers.nips.cc/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html"
+          }
+        ]
       }
     ]
   },
@@ -1173,6 +1443,100 @@ export const PHASES: Phase[] = [
             "kind": "web",
             "title": "Google PAIR: People + AI Guidebook",
             "url": "https://pair.withgoogle.com/guidebook/"
+          }
+        ]
+      },
+      {
+        "id": "strategi-ai-business-case",
+        "title": "Strategi AI & Business Case",
+        "steps": [
+          {
+            "id": "strategi-ai-business-case-01",
+            "text": "Menilai peluang AI: masalah, data, kelayakan, dan nilai (matriks dampak × kelayakan)"
+          },
+          {
+            "id": "strategi-ai-business-case-02",
+            "text": "Business case dan ROI: biaya total, manfaat, waktu balik modal, dan analisis sensitivitas"
+          },
+          {
+            "id": "strategi-ai-business-case-03",
+            "text": "Build vs buy vs API: kriteria keputusan dan biaya tersembunyi"
+          },
+          {
+            "id": "strategi-ai-business-case-04",
+            "text": "Prioritisasi dan roadmap tim: now/next/later dan kapasitas nyata"
+          },
+          {
+            "id": "strategi-ai-business-case-05",
+            "text": "Risiko dan kesiapan organisasi: kesiapan data, adopsi pengguna, change management, dan etika"
+          },
+          {
+            "id": "strategi-ai-business-case-06",
+            "text": "Mengukur dan melaporkan dampak: metrik bisnis, OKR, dan review pascaproyek"
+          }
+        ],
+        "sources": [
+          {
+            "kind": "web",
+            "title": "Google PAIR: People + AI Guidebook",
+            "url": "https://pair.withgoogle.com/guidebook/"
+          },
+          {
+            "kind": "web",
+            "title": "HBR: Building the AI-Powered Organization",
+            "url": "https://hbr.org/2019/07/building-the-ai-powered-organization"
+          },
+          {
+            "kind": "web",
+            "title": "Google: Rules of Machine Learning (aturan tingkat produk)",
+            "url": "https://developers.google.com/machine-learning/guides/rules-of-ml"
+          }
+        ]
+      },
+      {
+        "id": "komunikasi-manajemen-tim",
+        "title": "Komunikasi & Manajemen Tim",
+        "steps": [
+          {
+            "id": "komunikasi-manajemen-tim-01",
+            "text": "Komunikasi ke eksekutif: jawaban dulu, satu halaman keputusan, dan bahasa dampak"
+          },
+          {
+            "id": "komunikasi-manajemen-tim-02",
+            "text": "Mengelola ekspektasi: memberi estimasi dengan rentang dan menyampaikan hasil negatif"
+          },
+          {
+            "id": "komunikasi-manajemen-tim-03",
+            "text": "Pemetaan stakeholder dan kolaborasi dengan produk, engineering, dan data engineering"
+          },
+          {
+            "id": "komunikasi-manajemen-tim-04",
+            "text": "Perencanaan kerja tim: estimasi, kapasitas, prioritas, dan utang teknis"
+          },
+          {
+            "id": "komunikasi-manajemen-tim-05",
+            "text": "1:1, umpan balik, delegasi, dan pengembangan karier anggota tim"
+          },
+          {
+            "id": "komunikasi-manajemen-tim-06",
+            "text": "Hiring dan struktur tim: peran DS, MLE, DE, analis, dan cara mewawancarai"
+          }
+        ],
+        "sources": [
+          {
+            "kind": "web",
+            "title": "Storytelling with Data: blog",
+            "url": "https://www.storytellingwithdata.com/blog"
+          },
+          {
+            "kind": "web",
+            "title": "Radical Candor",
+            "url": "https://www.radicalcandor.com/"
+          },
+          {
+            "kind": "web",
+            "title": "The Manager's Path (Camille Fournier)",
+            "url": "https://www.oreilly.com/library/view/the-managers-path/9781491973882/"
           }
         ]
       },
@@ -1232,5 +1596,133 @@ export const PHASES: Phase[] = [
   }
 ];
 
-/** Urutan langkah di roadmap HTML lama (checkbox c1, c2, ...). Dipakai untuk impor progres lama. */
-export const LEGACY_ORDER: string[] = PHASES.flatMap(p => p.topics.flatMap(t => t.steps.map(s => s.id)));
+/**
+ * Urutan langkah di roadmap HTML lama (checkbox c1, c2, ...), dibekukan pada 124 langkah asli.
+ * Dipakai untuk impor progres lama. Jangan diubah dan jangan ditambah: langkah baru tidak punya nomor lama.
+ */
+export const LEGACY_ORDER: string[] = [
+  'python-01',
+  'python-02',
+  'python-03',
+  'python-04',
+  'python-05',
+  'python-06',
+  'python-07',
+  'python-08',
+  'python-09',
+  'git-github-01',
+  'git-github-02',
+  'git-github-03',
+  'git-github-04',
+  'git-github-05',
+  'git-github-06',
+  'sql-01',
+  'sql-02',
+  'sql-03',
+  'sql-04',
+  'sql-05',
+  'sql-06',
+  'sql-07',
+  'sql-08',
+  'aljabar-linear-01',
+  'aljabar-linear-02',
+  'aljabar-linear-03',
+  'aljabar-linear-04',
+  'aljabar-linear-05',
+  'aljabar-linear-06',
+  'aljabar-linear-07',
+  'aljabar-linear-08',
+  'kalkulus-optimasi-01',
+  'kalkulus-optimasi-02',
+  'kalkulus-optimasi-03',
+  'kalkulus-optimasi-04',
+  'kalkulus-optimasi-05',
+  'kalkulus-optimasi-06',
+  'probabilitas-statistik-01',
+  'probabilitas-statistik-02',
+  'probabilitas-statistik-03',
+  'probabilitas-statistik-04',
+  'probabilitas-statistik-05',
+  'probabilitas-statistik-06',
+  'probabilitas-statistik-07',
+  'numpy-01',
+  'numpy-02',
+  'pandas-01',
+  'pandas-02',
+  'pandas-03',
+  'pandas-04',
+  'pandas-05',
+  'data-cleaning-01',
+  'data-cleaning-02',
+  'data-cleaning-03',
+  'data-cleaning-04',
+  'data-cleaning-05',
+  'visualisasi-storytelling-01',
+  'visualisasi-storytelling-02',
+  'visualisasi-storytelling-03',
+  'supervised-learning-01',
+  'supervised-learning-02',
+  'supervised-learning-03',
+  'supervised-learning-04',
+  'supervised-learning-05',
+  'supervised-learning-06',
+  'supervised-learning-07',
+  'unsupervised-learning-01',
+  'unsupervised-learning-02',
+  'unsupervised-learning-03',
+  'unsupervised-learning-04',
+  'evaluasi-model-01',
+  'evaluasi-model-02',
+  'evaluasi-model-03',
+  'evaluasi-model-04',
+  'evaluasi-model-05',
+  'evaluasi-model-06',
+  'dasar-neural-networks-01',
+  'dasar-neural-networks-02',
+  'dasar-neural-networks-03',
+  'dasar-neural-networks-04',
+  'dasar-neural-networks-05',
+  'dasar-neural-networks-06',
+  'computer-vision-01',
+  'computer-vision-02',
+  'computer-vision-03',
+  'nlp-01',
+  'nlp-02',
+  'nlp-03',
+  'nlp-04',
+  'nlp-05',
+  'framework-01',
+  'framework-02',
+  'framework-03',
+  'model-serving-01',
+  'model-serving-02',
+  'docker-01',
+  'docker-02',
+  'docker-03',
+  'deployment-cloud-01',
+  'llm-01',
+  'llm-02',
+  'llm-03',
+  'rag-ai-agents-01',
+  'rag-ai-agents-02',
+  'tracking-monitoring-01',
+  'tracking-monitoring-02',
+  'tracking-monitoring-03',
+  'tracking-monitoring-04',
+  'ci-cd-untuk-ml-01',
+  'ci-cd-untuk-ml-02',
+  'governance-security-01',
+  'governance-security-02',
+  'governance-security-03',
+  'governance-security-04',
+  'prinsip-lead-data-scientist-01',
+  'prinsip-lead-data-scientist-02',
+  'prinsip-lead-data-scientist-03',
+  'prinsip-lead-data-scientist-04',
+  'proyek-capstone-01',
+  'proyek-capstone-02',
+  'proyek-capstone-03',
+  'proyek-capstone-04',
+  'proyek-capstone-05',
+  'proyek-capstone-06',
+];

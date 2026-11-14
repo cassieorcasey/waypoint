@@ -27,6 +27,13 @@ import ciCdUntukMl from './ci-cd-untuk-ml.md?raw';
 import governanceSecurity from './governance-security.md?raw';
 import prinsipLeadDataScientist from './prinsip-lead-data-scientist.md?raw';
 import proyekCapstone from './proyek-capstone.md?raw';
+import timeSeries from './time-series.md?raw';
+import eksperimenKausal from './eksperimen-kausal.md?raw';
+import dataEngineering from './data-engineering.md?raw';
+import evaluasiLlm from './evaluasi-llm.md?raw';
+import desainSistemMl from './desain-sistem-ml.md?raw';
+import strategiAiBusinessCase from './strategi-ai-business-case.md?raw';
+import komunikasiManajemenTim from './komunikasi-manajemen-tim.md?raw';
 
 export const NOTES: Record<string, string> = {
   'python': python,
@@ -56,4 +63,11 @@ export const NOTES: Record<string, string> = {
   'governance-security': governanceSecurity,
   'prinsip-lead-data-scientist': prinsipLeadDataScientist,
   'proyek-capstone': proyekCapstone,
+  'time-series': timeSeries,
+  'eksperimen-kausal': eksperimenKausal,
+  'data-engineering': dataEngineering,
+  'evaluasi-llm': evaluasiLlm,
+  'desain-sistem-ml': desainSistemMl,
+  'strategi-ai-business-case': strategiAiBusinessCase,
+  'komunikasi-manajemen-tim': komunikasiManajemenTim,
 };

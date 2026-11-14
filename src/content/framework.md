@@ -1,4 +1,4 @@
-Catatan ini mengikuti tiga langkah di checklist. Framework deep learning mengurus tiga hal yang di catatan Dasar Neural Networks kita kerjakan manual: **tensor di GPU**, **autograd** (backpropagation otomatis), dan **komponen siap pakai** (layer, loss, optimizer). PyTorch dominan di riset dan sebagian besar industri; Keras unggul dalam kesederhanaan.
+Catatan ini mengikuti tiga langkah di checklist, ditambah mini-proyek penutup fase. Framework deep learning mengurus tiga hal yang di catatan Dasar Neural Networks kita kerjakan manual: **tensor di GPU**, **autograd** (backpropagation otomatis), dan **komponen siap pakai** (layer, loss, optimizer). PyTorch dominan di riset dan sebagian besar industri; Keras unggul dalam kesederhanaan.
 
 ## 1. PyTorch
 
@@ -127,6 +127,18 @@ Daftar periksa saat training tidak berjalan baik:
 6. **Seed acak** (`torch.manual_seed`) untuk hasil yang bisa diulang saat membandingkan eksperimen.
 
 Evaluasi akhir dilakukan sekali pada data uji yang terpisah, dengan metrik dari catatan Evaluasi Model (confusion matrix, precision, recall, ROC-AUC), bukan hanya akurasi.
+
+## Mini-proyek Fase 5
+
+Lakukan *transfer learning* pada satu kasus gambar atau teks:
+
+1. Pilih dataset kecil (ratusan sampai beberapa ribu contoh) dan model pra-latih dari `torchvision` atau Hugging Face.
+2. Mulai dengan baseline klasik (misalnya logistic regression di atas fitur sederhana) dan catat skornya.
+3. **Fine-tune** model pra-latih dengan pelatihan yang bisa diulang (seed, versi pustaka, dan konfigurasi dicatat).
+4. Buat **laporan error**: tampilkan contoh yang salah, kelompokkan jenis kesalahannya, dan usulkan perbaikan data atau model.
+5. Bandingkan dengan baseline dari sisi skor, waktu latih, dan biaya.
+
+Tanda selesai: kamu bisa menjelaskan kapan deep learning memang sepadan dibanding model klasik untuk kasus ini, dan kapan tidak.
 
 ## Latihan
 

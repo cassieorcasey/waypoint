@@ -1,4 +1,4 @@
-Catatan ini mengikuti enam langkah di checklist. Model hanya sebaik cara kita mengukurnya. Metrik yang salah atau cara pembagian data yang bocor membuat model terlihat bagus di laptop lalu gagal di produksi.
+Catatan ini mengikuti enam langkah di checklist, ditambah mini-proyek penutup fase. Model hanya sebaik cara kita mengukurnya. Metrik yang salah atau cara pembagian data yang bocor membuat model terlihat bagus di laptop lalu gagal di produksi.
 
 ```python
 import numpy as np
@@ -163,6 +163,18 @@ print(round(cari.score(X_te, y_te), 3))   # data uji hanya disentuh sekali, di a
 ```
 
 Aturan yang tidak boleh dilanggar: data uji **hanya dipakai sekali**, setelah semua pilihan selesai. Kalau kamu memilih model berdasarkan skor uji, data uji sudah berubah fungsi menjadi data validasi dan skornya tidak lagi jujur. Untuk estimasi yang benar-benar tidak bias saat tuning intensif, gunakan *nested cross-validation*.
+
+## Mini-proyek Fase 4
+
+Bangun satu proyek prediksi dari awal sampai akhir pada dataset tabular yang kamu pilih:
+
+1. Tulis **problem statement** dan metrik keberhasilan (teknis dan bisnis) sebelum memodelkan.
+2. Buat **baseline sederhana** (aturan atau model paling dasar) dan catat skornya.
+3. Bandingkan dua atau tiga model dengan **validasi silang yang sesuai** (berdasarkan waktu atau kelompok bila datanya menuntut), dalam satu `Pipeline` agar tidak ada kebocoran.
+4. Lakukan **error analysis**: kelompok mana yang paling sering salah, dan mengapa.
+5. Tulis satu paragraf **dampak bisnis**: keputusan apa yang berubah dan perkiraan nilainya.
+
+Tanda selesai: kamu bisa menunjukkan bahwa modelmu mengalahkan baseline dan menjelaskan satu kelemahan terbesarnya.
 
 ## Latihan
 

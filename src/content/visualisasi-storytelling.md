@@ -1,4 +1,4 @@
-Catatan ini mengikuti tiga langkah di checklist. Visualisasi punya dua tugas berbeda: **eksplorasi** (kamu sendiri mencari pola, cepat dan banyak) dan **komunikasi** (orang lain memahami satu pesan, sedikit dan rapi). Kesalahan paling umum adalah menunjukkan grafik eksplorasi ke audiens.
+Catatan ini mengikuti tiga langkah di checklist, ditambah mini-proyek penutup fase. Visualisasi punya dua tugas berbeda: **eksplorasi** (kamu sendiri mencari pola, cepat dan banyak) dan **komunikasi** (orang lain memahami satu pesan, sedikit dan rapi). Kesalahan paling umum adalah menunjukkan grafik eksplorasi ke audiens.
 
 ```python
 import matplotlib.pyplot as plt
@@ -112,6 +112,19 @@ Struktur yang bekerja untuk presentasi ke non teknis adalah **jawaban dulu** (pi
 4. **Langkah berikutnya** dan keputusan yang diminta dari mereka.
 
 > **Tip:** Uji grafikmu dengan aturan lima detik. Tunjukkan ke orang lain selama lima detik, lalu tanyakan apa pesannya. Kalau jawabannya beda dengan judulmu, perbaiki grafiknya.
+
+## Mini-proyek Fase 3
+
+Lakukan analisis eksploratif penuh pada **satu dataset publik** yang kamu pilih (Kaggle, data pemerintah, atau portal data terbuka):
+
+1. Tulis dulu **tiga pertanyaan bisnis** yang ingin dijawab.
+2. Bersihkan data dan **catat setiap keputusan** (baris yang dibuang, cara mengisi nilai kosong) beserta alasannya.
+3. Analisis dengan pandas dan buat **tiga sampai lima grafik** yang masing-masing membawa satu pesan, berjudul kesimpulan.
+4. Tutup dengan **laporan satu halaman** untuk pembaca non teknis: temuan utama, bukti, batasan, dan apa yang kamu sarankan.
+
+Latihan kepemimpinan pertamamu: **presentasikan temuan itu ke satu orang non teknis** (teman atau keluarga), catat pertanyaan yang ia ajukan, dan perbaiki laporannya berdasarkan itu.
+
+Tanda selesai: pembaca bisa menyebutkan kesimpulan utamamu setelah membaca satu menit.
 
 ## Latihan
 

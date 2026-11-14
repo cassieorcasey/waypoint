@@ -1,4 +1,4 @@
-Catatan ini mengikuti tujuh langkah di checklist. Statistik adalah cara menarik kesimpulan dari data yang tidak lengkap dan berisik. Bagi data scientist, ini yang membedakan "angkanya naik" dari "angkanya naik dan itu bukan kebetulan".
+Catatan ini mengikuti tujuh langkah di checklist, ditambah mini-proyek penutup fase. Statistik adalah cara menarik kesimpulan dari data yang tidak lengkap dan berisik. Bagi data scientist, ini yang membedakan "angkanya naik" dari "angkanya naik dan itu bukan kebetulan".
 
 ```python
 import numpy as np
@@ -165,6 +165,36 @@ Kesalahan umum yang harus dihindari:
 - **Banyak metrik sekaligus** tanpa koreksi: satu dari dua puluh metrik akan "signifikan" secara kebetulan.
 - **Durasi terlalu pendek**: minimal satu siklus mingguan penuh, karena perilaku hari kerja dan akhir pekan berbeda.
 - **Efek kebaruan**: pengguna mencoba fitur baru karena baru, lalu kembali ke kebiasaan lama.
+
+## Mini-proyek Fase 2
+
+Implementasikan regresi linear tanpa pustaka ML, supaya aljabar linear, kalkulus, dan statistik terasa menyatu:
+
+1. Buat data sintetis `y = 3x + 5 + derau` dengan NumPy.
+2. Selesaikan dengan **solusi tertutup** (persamaan normal) dan dengan **gradient descent** buatanmu sendiri. Bandingkan koefisiennya, lalu plot kurva loss per iterasi.
+3. Hitung **interval kepercayaan** untuk koefisien (rumus atau bootstrap) dan jelaskan artinya.
+4. Tulis satu paragraf untuk orang non teknis: apa yang dipelajari model, dan seberapa yakin kamu.
+
+Kerangka awalnya:
+
+```python
+import numpy as np
+
+rng = np.random.default_rng(0)
+x = rng.uniform(0, 10, 200)
+y = 3 * x + 5 + rng.normal(0, 2, 200)
+X = np.column_stack([np.ones_like(x), x])                 # kolom 1 untuk intersep
+
+beta_tertutup = np.linalg.solve(X.T @ X, X.T @ y)          # persamaan normal
+
+beta = np.zeros(2)
+for _ in range(5000):
+    gradien = 2 / len(y) * X.T @ (X @ beta - y)            # turunan MSE terhadap beta
+    beta -= 0.01 * gradien
+print(beta_tertutup.round(2), beta.round(2))               # keduanya mendekati [5, 3]
+```
+
+Tanda selesai: kamu bisa menjelaskan mengapa kedua cara memberi jawaban yang sama, dan apa yang terjadi jika laju belajar dibuat terlalu besar.
 
 ## Latihan
 

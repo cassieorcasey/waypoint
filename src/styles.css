@@ -152,12 +152,12 @@ a { color: inherit; }
 .bubble {
   position: absolute; z-index: 3;
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
-  padding: 10px; border-radius: 50%; text-align: center;
+  padding: 8px; border-radius: 50%; text-align: center;
   background: var(--bubble-bg); border: 1px solid var(--hairline);
   -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
   transition: background 0.35s, border-color 0.35s, box-shadow 0.35s, color 0.35s;
 }
-.bubble-title { font-size: 12px; line-height: 1.18; font-weight: 600; letter-spacing: -0.01em; max-width: 86%; overflow-wrap: anywhere; hyphens: auto; }
+.bubble-title { font-size: 11px; line-height: 1.18; font-weight: 600; letter-spacing: -0.015em; max-width: 100%; overflow-wrap: break-word; }
 .bubble-count { font-size: 11px; font-weight: 500; color: var(--muted); font-variant-numeric: tabular-nums; }
 .bubble-ring { position: absolute; inset: -1px; width: calc(100% + 2px); height: calc(100% + 2px); pointer-events: none; }
 .bubble-check { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--on-teal); color: var(--teal); }

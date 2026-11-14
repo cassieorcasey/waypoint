@@ -27,10 +27,11 @@ Semua fase, topik, langkah, dan sumber ada di `src/data/roadmap.ts`.
 - Teks dan judul boleh diubah kapan saja.
 - **Jangan mengganti id yang sudah ada.** Progres di Supabase tersimpan per id langkah.
 - Langkah baru memakai id baru (misalnya `python-10`), meski disisipkan di tengah daftar.
+- **`LEGACY_ORDER` jangan diubah.** Daftar itu dibekukan pada 124 langkah asli supaya nomor checkbox lama tetap cocok saat impor. Langkah baru tidak punya nomor lama.
 
 ## Materi per topik
 
-Topik yang punya catatan menampilkan tab **Materi** di panelnya, di samping **Langkah**. Catatan ditulis sebagai markdown di `src/content/<topik>.md`; semua 27 topik di Fase 1–9 sudah punya catatan.
+Topik yang punya catatan menampilkan tab **Materi** di panelnya, di samping **Langkah**. Catatan ditulis sebagai markdown di `src/content/<topik>.md`; semua 34 topik di Fase 1–9 sudah punya catatan.
 
 Menambah catatan untuk topik baru:
 
@@ -47,7 +48,7 @@ Kalau roadmap HTML lama pernah dibuka di `cassieorcasey.github.io`, centangnya t
 
 | Bagian | Isi |
 |---|---|
-| `src/data/roadmap.ts` | Struktur roadmap: 9 fase, 27 topik, 124 langkah |
+| `src/data/roadmap.ts` | Struktur roadmap: 9 fase, 34 topik, 171 langkah |
 | `src/components/PhaseMap.tsx` | Jalur fase, cincin progres, gelembung topik |
 | `src/components/TopicSheet.tsx` | Panel langkah, materi, dan sumber (Vaul) |
 | `src/content/` | Catatan materi per topik (markdown) dan daftarnya |

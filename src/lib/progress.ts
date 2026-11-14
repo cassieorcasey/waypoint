@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { SupabaseClient } from '@supabase/supabase-js';
-import { LEGACY_ORDER } from '../data/roadmap';
+import { PHASES } from '../data/roadmap';
 import { safeStorage } from './hooks';
 
 const TABLE = 'waypoint_progress';
 const DEMO_KEY = 'waypoint_demo_progress';
-const VALID = new Set(LEGACY_ORDER);
+const VALID = new Set(PHASES.flatMap(p => p.topics.flatMap(t => t.steps.map(s => s.id))));
 
 const readDemo = (): string[] => {
   try { return (JSON.parse(safeStorage.get(DEMO_KEY) || '[]') as string[]).filter(id => VALID.has(id)); }

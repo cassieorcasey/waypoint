@@ -1,4 +1,4 @@
-Catatan ini membahas satu langkah di checklist, dengan tiga pilihan platform. Setelah API terbungkus Docker, langkah terakhir adalah menjalankannya di server yang bisa diakses internet. Ketiga platform di sini menerima **image Docker**, jadi Dockerfile dari catatan sebelumnya bisa dipakai hampir tanpa perubahan.
+Catatan ini membahas satu langkah di checklist, dengan tiga pilihan platform, ditambah mini-proyek penutup Fase 6. Setelah API terbungkus Docker, langkah terakhir adalah menjalankannya di server yang bisa diakses internet. Ketiga platform di sini menerima **image Docker**, jadi Dockerfile dari catatan sebelumnya bisa dipakai hampir tanpa perubahan.
 
 ## Memilih platform
 
@@ -81,6 +81,18 @@ Pastikan image dibangun untuk arsitektur yang sesuai. Laptop Apple Silicon mengh
 - **Pantau log** di dashboard platform, terutama error 4xx/5xx dan latensi.
 - **Otomatisasi deploy** dari GitHub Actions (catatan CI/CD Fase 8): tes lulus → build image → deploy.
 - **Versi**: beri tag image dengan versi atau hash commit, bukan hanya `latest`, supaya bisa kembali ke versi sebelumnya dengan cepat.
+
+## Mini-proyek Fase 6
+
+Bawa satu model dari Fase 4 atau 5 ke bentuk yang bisa dipakai orang lain:
+
+1. Bungkus model dengan **API** (FastAPI) lengkap dengan validasi input, endpoint kesehatan (`/health`), dan penanganan error.
+2. Kemas dalam **Docker** dengan image yang kecil, tanpa rahasia di dalamnya, dan jalan sebagai pengguna non-root.
+3. **Deploy ke cloud** (Hugging Face Spaces, Render, atau layanan serupa) dan pastikan bisa diakses dari luar.
+4. Tulis **README**: apa yang dilakukan model, contoh permintaan dan jawaban, batasannya, dan cara menjalankannya lokal.
+5. Catat **latensi** dan perkiraan biaya bulanan.
+
+Tanda selesai: seseorang yang tidak mengenalmu bisa memanggil API-mu dengan satu perintah `curl` dari README.
 
 ## Latihan
 

@@ -1,4 +1,4 @@
-Catatan ini mengikuti delapan langkah di checklist. Semua contoh memakai dua tabel kecil supaya mudah dilacak. Sintaksnya standar SQL dan jalan di PostgreSQL maupun MySQL. SQLite (tanpa instalasi server) cukup untuk mencoba hampir semuanya; pengecualiannya `ALTER TABLE ... ADD CONSTRAINT` di langkah 7, dan `FULL JOIN` yang baru ada di SQLite 3.39 ke atas. Contoh dan hasilnya sudah dijalankan untuk memastikan keluarannya cocok.
+Catatan ini mengikuti delapan langkah di checklist, ditambah mini-proyek penutup fase. Semua contoh memakai dua tabel kecil supaya mudah dilacak. Sintaksnya standar SQL dan jalan di PostgreSQL maupun MySQL. SQLite (tanpa instalasi server) cukup untuk mencoba hampir semuanya; pengecualiannya `ALTER TABLE ... ADD CONSTRAINT` di langkah 7, dan `FULL JOIN` yang baru ada di SQLite 3.39 ke atas. Contoh dan hasilnya sudah dijalankan untuk memastikan keluarannya cocok.
 
 ```sql
 CREATE TABLE pelanggan (
@@ -235,6 +235,16 @@ Normalisasi menata tabel supaya data tidak berulang dan tidak menimbulkan anomal
 Hasilnya adalah tabel seperti di awal catatan ini: `pelanggan`, `pesanan`, ditambah `produk` dan `detail_pesanan`. Manfaatnya: mengubah kota Ayu cukup di satu tempat (tidak ada anomali pembaruan), dan data tidak tersimpan di dua tempat yang bisa bertentangan.
 
 Normalisasi bukan dogma. Untuk analitik dan data warehouse, tabel sering sengaja **didenormalisasi** (satu tabel lebar) supaya query baca lebih cepat tanpa banyak JOIN. Aturan praktisnya: sistem transaksi cenderung dinormalisasi, sistem laporan cenderung didenormalisasi.
+
+## Mini-proyek Fase 1
+
+Gabungkan tiga dasar Fase 1 dalam satu repositori kecil:
+
+1. **Alat CLI Python** (misalnya pencatat pengeluaran atau pengubah format berkas), dengan logika yang dipisah dari bagian input dan output, penanganan error, dan tiga tes `pytest`.
+2. **Repo Git yang rapi**: riwayat commit yang jelas, `.gitignore`, README berisi cara pasang dan cara pakai, serta satu pull request dari branch ke `main` yang kamu review sendiri.
+3. **Database SQLite** berisi data contoh dan dua query yang menjawab pertanyaan bisnis nyata, satu dengan `JOIN` dan `GROUP BY`, satu dengan window function, masing-masing dengan penjelasan hasil dalam dua kalimat.
+
+Tanda selesai: orang lain bisa mengunduh repomu, mengikuti README, dan menjalankannya tanpa bertanya.
 
 ## Latihan
 
